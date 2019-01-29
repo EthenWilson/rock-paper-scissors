@@ -1,0 +1,16 @@
+### Rock Paper Scissors v1.0
+
+import random ## for random to work
+import os ## for clrscr to work
+
+## Game Modes:
+# Classic Gameplay
+## Earth, Air, Fire, Water
+### South Park (Eric, Kyle, Stan and Kenny)
+#### Mortal Kombat (Scorpion, Sub Zero, Kitana, Liu Kang, Mileena)
+
+rps_win_list = [('ROCK','PAPER'), # who can be defeated by Rock
+                ('PAPER','SCISSORS'), # who can be defeated by Paper
+                ('SCISSORS','ROCK')] # who can be defeated by Scissors
+               
+selections_rps_list = [('ROCK','PAPER','SCISSORS')]
