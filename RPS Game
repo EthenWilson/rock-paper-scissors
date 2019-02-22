@@ -1,16 +1,63 @@
-### Rock Paper Scissors v1.0
+d = 0
 
-import random ## for random to work
-import os ## for clrscr to work
+w = 0
 
-## Game Modes:
-# Classic Gameplay
-## Earth, Air, Fire, Water
-### South Park (Eric, Kyle, Stan and Kenny)
-#### Mortal Kombat (Scorpion, Sub Zero, Kitana, Liu Kang, Mileena)
+l = 0
 
-rps_win_list = [('ROCK','PAPER'), # who can be defeated by Rock
-                ('PAPER','SCISSORS'), # who can be defeated by Paper
-                ('SCISSORS','ROCK')] # who can be defeated by Scissors
-               
-selections_rps_list = [('ROCK','PAPER','SCISSORS')]
+
+
+while w < 5 and l < 5:
+  from random import randint
+
+  print('Rock (r), Paper(p), Scissors(s)?')
+  player = input()
+  
+  
+  chosen = randint(1,3)
+  if chosen == 1:
+    computer = 'r'
+  
+  if chosen == 2:
+    computer = 'p'
+    
+  if chosen == 3:
+    computer = 's'
+  print(player, 'vs', computer)
+  
+  if player == computer:
+    print("DRAW")
+    d = d + 1
+    
+  if player == 'r' and computer == 's':
+    print('PLAYER WINS!')
+    w = w + 1
+      
+  if player == 'r' and computer == 'p':
+    print('COMPUTER WINS!')
+    l = l + 1
+      
+  if player == 'p' and computer == 'r':
+    print('PLAYER WINS!')
+    w = w + 1
+      
+  if player == 'p' and computer == 's':
+    print('COMPUTER WINS!')
+    l = l + 1
+      
+  if player == 's' and computer == 'p':
+    print('PLAYER WINS!')
+    w = w + 1
+    
+  if player == 's' and computer == 'r':
+    print('COMPUTER WINS!')
+    l = l + 1
+  
+  print("Win =", w)
+  
+  print("Lost =", l)
+  
+  print('DRAW =', d)
+
+  
+  
+  
